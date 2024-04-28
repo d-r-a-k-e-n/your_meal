@@ -1,0 +1,132 @@
+.footer {
+  padding: 24px 0;
+  background-color: var(--white);
+
+  &__logo {
+    width: 196px;
+    color: var(--orange);
+    margin-bottom: 24px;
+  }
+
+  &__address {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 34px;
+    font-style: normal;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    margin-bottom: 8px;
+  }
+
+  &__link-phone {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    color: var(--black);
+    text-decoration: none;
+    transition: translate 0.1s ease, color 0.2s ease-in-out;
+  }
+
+  &__list {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__link-sn {
+    color: var(--orange);
+    transition: color 0.1s ease-in-out;
+  }
+
+  &__link-phone:hover,
+  &__link-phone:focus,
+  &__link-sn:hover,
+  &__link-sn:focus {
+    color: var(--yellow);
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .footer {
+    &__logo {
+      margin-bottom: 36px;
+    }
+
+    &__address {
+      flex-direction: row;
+      margin-bottom: 40px;
+    }
+
+    &__contact {
+      flex-grow: 1;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer {
+    &__content {
+      display: grid;
+      grid-template-areas:
+        'logo address'
+        'dev .';
+    }
+
+    &__logo {
+      width: 300px;
+      margin-bottom: 0;
+      grid-area: logo;
+    }
+
+    &__logo {
+      margin-bottom: 0;
+    }
+
+    &__address {
+      margin-bottom: 0;
+      grid-area: address;
+      gap: 50px;
+      justify-content: flex-end;
+    }
+
+    &__contact {
+      flex-grow: unset;
+    }
+
+    &__title {
+      margin-bottom: 24px;
+      font-size: 24px;
+    }
+    &__title--sn {
+      margin-bottom: 22px;
+    }
+
+    &__link-phone {
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (min-width: 1360px) {
+  .footer {
+    &__content {
+      grid-template-columns: 1fr 1fr;
+      gap: 35px 30px;
+    }
+
+    &__address {
+      justify-content: flex-start;
+    }
+
+    &__contact {
+      flex-grow: 1;
+    }
+  }
+}

@@ -1,0 +1,99 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  --container: 300px;
+  --padding-container: 10px;
+  box-sizing: border-box;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background-color: var(--light);
+  color: var(--black);
+  font-family: 'Nunito', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  position: relative;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+a {
+  display: inline-block;
+}
+
+address {
+  font-style: normal;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.currency {
+  font-weight: 400;
+}
+
+@media screen and (min-width: 480px) {
+  html {
+    --container: 640px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    --padding-container: 64px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  html {
+    --container: 960px;
+    --padding-container: 32px;
+  }
+}
+
+@media screen and (min-width: 1360px) {
+  html {
+    --container: 1290px;
+  }
+}

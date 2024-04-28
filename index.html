@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Meal</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="icon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="icon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="icon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="icon/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <link
+      rel="preload"
+      href="fonts/nunito-v26-latin-regular.woff2"
+      as="font"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/nunito-v26-latin-600.woff2"
+      as="font"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/nunito-v26-latin-800.woff2"
+      as="font"
+      crossorigin
+    />
+
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__container">
+        <svg
+          class="header__logo"
+          viewBox="0 0 199 44"
+          aria-label="Logo YouMeal"
+        >
+          <use href="./images/sprite.svg#logo" />
+        </svg>
+        <div class="header__title-container">
+          <h1 class="header__title">
+            Only the most <span class="text-accent">juicy burgers!</span>
+          </h1>
+          <p class="header__text">
+            Free delivery from <span class="text-bold">599₴</span>
+          </p>
+        </div>
+      </div>
+    </header>
+    <main>
+      <nav class="navigation">
+        <div class="container navigation__container">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <button
+                class="navigation__button navigation__button--burger navigation__button--active"
+              >
+                Burgers
+              </button>
+            </li>
+            <li class="navigation__item">
+              <button class="navigation__button navigation__button--snack">
+                Snacks
+              </button>
+            </li>
+            <li class="navigation__item">
+              <button class="navigation__button navigation__button--hot-dog">
+                Hot-dogs
+              </button>
+            </li>
+            <li class="navigation__item">
+              <button class="navigation__button navigation__button--combo">
+                Combo
+              </button>
+            </li>
+            <li class="navigation__item">
+              <button class="navigation__button navigation__button--shawarma">
+                Shawarma
+              </button>
+            </li>
+            <li class="navigation__item">
+              <button class="navigation__button navigation__button--pizza">
+                Pizza
+              </button>
+            </li>
+            <li class="navigation__item">
+              <button class="navigation__button navigation__button--wok">
+                Wok
+              </button>
+            </li>
+            <li class="navigation__item">
+              <button class="navigation__button navigation__button--desert">
+                Dessert
+              </button>
+            </li>
+            <li class="navigation__item">
+              <button class="navigation__button navigation__button--sauce">
+                Sauces
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <section class="catalog">
+        <div class="container catalog__container">
+          <div class="catalog__order order">
+            <!--order--open цей клас додається щоб відкрити корзину-->
+            <section class="order__wrapper">
+              <div class="order__wrap-title">
+                <h2 class="order__title">Basket</h2>
+
+                <span class="order__count">4</span>
+              </div>
+              <div class="order__wrap--list">
+                <ul class="order__list">
+                  <li class="order__item" data-id="Super-cheesy">
+                    <img
+                      class="order__image"
+                      src="/images/super-cheesy.jpg"
+                      alt="Super cheesy"
+                    />
+                    <div class="order__product">
+                      <h3 class="order__product-title">Super cheesy</h3>
+
+                      <p class="order__product-weight">512g</p>
+
+                      <p class="order__product-price">
+                        230 <span class="currency">₴</span>
+                      </p>
+                    </div>
+
+                    <div class="order__product-count count">
+                      <button class="count__minus" data-action="minus">
+                        -
+                      </button>
+                      <p class="count__amount" data-counter>1</p>
+                      <button class="count__plus" data-action="plus">+</button>
+                    </div>
+                  </li>
+                  <li class="order__item">
+                    <img
+                      class="order__image"
+                      src="/images/french-fries.jpg"
+                      alt="French fries"
+                    />
+                    <div class="order__product">
+                      <h3 class="order__product-title">French fries</h3>
+
+                      <p class="order__product-weight">180g</p>
+
+                      <p class="order__product-price">
+                        100 <span class="currency">₴</span>
+                      </p>
+                    </div>
+
+                    <div class="order__product-count count">
+                      <button class="count__minus" data-action="minus">
+                        -
+                      </button>
+                      <p class="count__amount" data-counter>2</p>
+                      <button class="count__plus" data-action="plus">+</button>
+                    </div>
+                  </li>
+                  <li class="order__item">
+                    <img
+                      class="order__image"
+                      src="/images/burning-hot-dog.jpg"
+                      alt="Burning hot dog"
+                    />
+                    <div class="order__product">
+                      <h3 class="order__product-title">Burning hot dog</h3>
+
+                      <p class="order__product-weight">245g</p>
+
+                      <p class="order__product-price">
+                        101 <span class="currency">₴</span>
+                      </p>
+                    </div>
+
+                    <div class="order__product-count count">
+                      <button class="count__minus" data-action="minus">
+                        -
+                      </button>
+                      <p class="count__amount" data-counter>1</p>
+                      <button class="count__plus" data-action="plus">+</button>
+                    </div>
+                  </li>
+                </ul>
+
+                <div data-cart-emty class="order__total">
+                  <p>Total</p>
+                  <p>
+                    <span class="order__total-amount">531</span>
+                    <span class="currency">₴</span>
+                  </p>
+                </div>
+
+                <button class="order__submit">To order</button>
+                <div class="order__wrap--apeal">
+                  <p class="order__apeal">Free shipping</p>
+                  <button class="order__close">Close</button>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="catalog__wrapper">
+            <h2 class="catalog__title">Burgers</h2>
+
+            <div class="catalog__wrap--list">
+              <ul class="catalog__list">
+                <li class="catalog__item">
+                  <article class="product" data-id="Meat-bomb">
+                    <img
+                      src="/images/meat-bomb.jpg"
+                      alt="Meat bomb"
+                      class="product__image"
+                    />
+
+                    <p class="product__price">
+                      290<span class="currency">₴</span>
+                    </p>
+
+                    <h3 class="product__title">
+                      <button class="product__detail">Meat bomb</button>
+                    </h3>
+
+                    <p class="product__weight">520g</p>
+
+                    <button data-cart type="button" class="product__add">
+                      Add
+                    </button>
+                  </article>
+                </li>
+
+                <li class="catalog__item">
+                  <article class="product" data-id="Super-cheesy">
+                    <img
+                      src="/images/super-cheesy.jpg"
+                      alt="Super cheesy"
+                      class="product__image"
+                    />
+
+                    <p class="product__price">
+                      230<span class="currency">₴</span>
+                    </p>
+
+                    <h3 class="product__title">
+                      <button class="product__detail">Super cheesy</button>
+                    </h3>
+
+                    <p class="product__weight">512g</p>
+
+                    <button data-cart class="product__add" type="button">
+                      Add
+                    </button>
+                  </article>
+                </li>
+
+                <li class="catalog__item">
+                  <article class="product" data-id="Satisfying">
+                    <img
+                      src="/images/satisfying.jpg"
+                      alt="Satisfying"
+                      class="product__image"
+                    />
+
+                    <p class="product__price">
+                      270<span class="currency">₴</span>
+                    </p>
+
+                    <h3 class="product__title">
+                      <button class="product__detail">Satisfying</button>
+                    </h3>
+
+                    <p class="product__weight">580g</p>
+
+                    <button data-cart class="product__add" type="button">
+                      Add
+                    </button>
+                  </article>
+                </li>
+
+                <li class="catalog__item">
+                  <article class="product" data-id="Heavy-blow">
+                    <img
+                      src="/images/heavy-blow.jpg"
+                      alt="Heavy blow"
+                      class="product__image"
+                    />
+
+                    <p class="product__price">
+                      200<span class="currency">₴</span>
+                    </p>
+
+                    <h3 class="product__title">
+                      <button class="product__detail">Heavy blow</button>
+                    </h3>
+
+                    <p class="product__weight">470g</p>
+
+                    <button data-cart class="product__add" type="button">
+                      Add
+                    </button>
+                  </article>
+                </li>
+
+                <li class="catalog__item">
+                  <article class="product" data-id="Timeless-classic">
+                    <img
+                      src="/images/timeless-classic.jpg"
+                      alt="Timeless classic"
+                      class="product__image"
+                    />
+
+                    <p class="product__price">
+                      190<span class="currency">₴</span>
+                    </p>
+
+                    <h3 class="product__title">
+                      <button class="product__detail">Timeless classic</button>
+                    </h3>
+
+                    <p class="product__weight">450g</p>
+
+                    <button data-cart class="product__add" type="button">
+                      Add
+                    </button>
+                  </article>
+                </li>
+
+                <li class="catalog__item">
+                  <article class="product" data-id="Italian">
+                    <img
+                      src="/images/italian.jpg"
+                      alt="Italian"
+                      class="product__image"
+                    />
+
+                    <p class="product__price">
+                      230<span class="currency">₴</span>
+                    </p>
+
+                    <h3 class="product__title">
+                      <button class="product__detail">Italian</button>
+                    </h3>
+
+                    <p class="product__weight">510g</p>
+
+                    <button data-cart class="product__add" type="button">
+                      Add
+                    </button>
+                  </article>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <svg
+            class="footer__logo"
+            viewBox="0 0 199 44"
+            aria-label="Logo YouMeal"
+          >
+            <use href="./images/sprite.svg#logo" />
+          </svg>
+
+          <address class="footer__address">
+            <div class="footer__contact">
+              <h2 class="footer__title">Order number</h2>
+
+              <a class="footer__link-phone" href="tel: +380960000007">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20.01 15.38C18.78 15.38 17.59 15.18 16.48 14.82C16.13 14.7 15.74 14.79 15.47 15.06L13.9 17.03C11.07 15.68 8.42 13.13 7.01 10.2L8.96 8.54C9.23 8.26 9.31 7.87 9.2 7.52C8.83 6.41 8.64 5.22 8.64 3.99C8.64 3.45 8.19 3 7.65 3H4.19C3.65 3 3 3.24 3 3.99C3 13.28 10.73 21 20.01 21C20.72 21 21 20.37 21 19.82V16.37C21 15.83 20.55 15.38 20.01 15.38Z"
+                  />
+                </svg>
+
+                <span>+ 38 (096) 000 00 07</span>
+              </a>
+            </div>
+
+            <div class="footer__contact">
+              <h2 class="footer__title footer__title--sn">We are in social</h2>
+
+              <ul class="footer__list">
+                <li class="footer__list-item">
+                  <a href="#" class="footer__link-sn" aria-label="inst">
+                    <svg
+                      width="36"
+                      height="36"
+                      viewBox="0 0 36 36"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M18 3.243C22.806 3.243 23.376 3.261 25.2735 3.348C27.2355 3.438 29.256 3.885 30.6855 5.3145C32.1285 6.7575 32.562 8.7585 32.652 10.7265C32.739 12.624 32.757 13.194 32.757 18C32.757 22.806 32.739 23.376 32.652 25.2735C32.5635 27.225 32.106 29.265 30.6855 30.6855C29.2425 32.1285 27.243 32.562 25.2735 32.652C23.376 32.739 22.806 32.757 18 32.757C13.194 32.757 12.624 32.739 10.7265 32.652C8.79 32.5635 6.723 32.0955 5.3145 30.6855C3.879 29.25 3.438 27.2295 3.348 25.2735C3.261 23.376 3.243 22.806 3.243 18C3.243 13.194 3.261 12.624 3.348 10.7265C3.4365 8.7825 3.8985 6.7305 5.3145 5.3145C6.7545 3.8745 8.763 3.438 10.7265 3.348C12.624 3.261 13.194 3.243 18 3.243ZM18 0C13.1115 0 12.498 0.021 10.578 0.108C7.7955 0.2355 5.0325 1.0095 3.021 3.021C1.002 5.04 0.2355 7.797 0.108 10.578C0.021 12.498 0 13.1115 0 18C0 22.8885 0.021 23.502 0.108 25.422C0.2355 28.2015 1.0125 30.972 3.021 32.979C5.0385 34.9965 7.8 35.7645 10.578 35.892C12.498 35.979 13.1115 36 18 36C22.8885 36 23.502 35.979 25.422 35.892C28.203 35.7645 30.969 34.989 32.979 32.979C34.9995 30.9585 35.7645 28.203 35.892 25.422C35.979 23.502 36 22.8885 36 18C36 13.1115 35.979 12.498 35.892 10.578C35.7645 7.7955 34.989 5.031 32.979 3.021C30.9645 1.0065 28.1955 0.234 25.422 0.108C23.502 0.021 22.8885 0 18 0Z"
+                      />
+                      <path
+                        d="M17.9998 8.75696C12.8953 8.75696 8.75684 12.8955 8.75684 18C8.75684 23.1045 12.8953 27.243 17.9998 27.243C23.1043 27.243 27.2428 23.1045 27.2428 18C27.2428 12.8955 23.1043 8.75696 17.9998 8.75696ZM17.9998 24C14.6863 24 11.9998 21.3135 11.9998 18C11.9998 14.6865 14.6863 12 17.9998 12C21.3133 12 23.9998 14.6865 23.9998 18C23.9998 21.3135 21.3133 24 17.9998 24Z"
+                      />
+                      <path
+                        d="M27.6092 10.551C28.8022 10.551 29.7692 9.58389 29.7692 8.39096C29.7692 7.19802 28.8022 6.23096 27.6092 6.23096C26.4163 6.23096 25.4492 7.19802 25.4492 8.39096C25.4492 9.58389 26.4163 10.551 27.6092 10.551Z"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer__list-item">
+                  <a href="#" class="footer__link-sn" aria-label="faceb">
+                    <svg
+                      width="36"
+                      height="36"
+                      viewBox="0 0 36 36"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M36 18.1095C36 27.093 29.409 34.5405 20.805 35.892V23.3475H24.9885L25.785 18.1575H20.805V14.79C20.805 13.3695 21.501 11.9865 23.73 11.9865H25.9935V7.5675C25.9935 7.5675 23.9385 7.2165 21.975 7.2165C17.874 7.2165 15.195 9.702 15.195 14.2005V18.156H10.6365V23.346H15.195V35.8905C6.5925 34.5375 0 27.0915 0 18.1095C0 8.169 8.0595 0.109497 18 0.109497C27.9405 0.109497 36 8.1675 36 18.1095Z"
+                      />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </address>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal modal--product">
+      <!-- modal--open цей клас для того щоб відкрити модальне вікно -->
+      <div class="modal__main modal-product">
+        <div class="modal-product__container">
+          <h2 class="modal-product__title">Meat bomb</h2>
+
+          <div class="modal-product__content">
+            <img
+              src="/images/meat-bomb.jpg"
+              alt="Meat bomb"
+              class="modal-product__image"
+            />
+
+            <p class="modal-product__description">
+              Super meaty pleasure! A large chopped cutlet made of fresh beef
+              will conquer you with its juiciness, and crisp lettuce leaves will
+              add freshness that cannot be forgotten.
+            </p>
+
+            <div class="modal-product__ingredients ingredients">
+              <h3 class="ingredients__title">Compound:</h3>
+
+              <ul class="ingredients__list">
+                <li class="ingredients__item">Wheat bun</li>
+                <li class="ingredients__item">Beef cutlet</li>
+                <li class="ingredients__item">Red onion</li>
+                <li class="ingredients__item">Lettuce leaves</li>
+                <li class="ingredients__item">Mustard sauce</li>
+              </ul>
+              <p class="ingredients__calories">520g, kcal 430</p>
+            </div>
+          </div>
+          <div class="modal-product__footer">
+            <div class="modal-product__add">
+              <button data-cart class="modal-product__btn">Add</button>
+
+              <div class="modal-product__count count">
+                <button class="count__minus" data-action="minus">-</button>
+                <p class="count__amount" data-counter>1</p>
+                <button class="count__plus" data-action="plus">+</button>
+              </div>
+            </div>
+            <p class="modal-product__price">
+              290 <span class="currency">₴</span>
+            </p>
+          </div>
+        </div>
+
+        <button class="modal__close">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              x="5.0752"
+              y="5.28249"
+              width="1"
+              height="20"
+              transform="rotate(-45 5.0752 5.28249)"
+            />
+            <rect
+              x="5.78223"
+              y="19.4246"
+              width="1"
+              height="20"
+              transform="rotate(-135 5.78223 19.4246)"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="modal modal--delivery">
+      <!-- modal--open відкривати другу модалку -->
+      <div class="modal__main modal-delivery">
+        <div class="modal-delivery__container">
+          <h2 class="modal-delivery__title">Delivery</h2>
+
+          <form class="modal-delivery__form" id="delivery">
+            <fieldset class="modal-delivery__fieldset">
+              <input
+                class="modal-delivery__input"
+                type="text"
+                name="name"
+                placeholder="Your name"
+              />
+              <input
+                class="modal-delivery__input"
+                type="tel"
+                name="phone"
+                placeholder="Telephone"
+              />
+            </fieldset>
+
+            <fieldset
+              class="modal-delivery__fieldset modal-delivery__fieldset--radio"
+            >
+              <label class="modal-delivery__label">
+                <input
+                  class="modal-delivery__radio"
+                  type="radio"
+                  name="format"
+                  value="Pickup"
+                  checked
+                />
+                <!-- checked для того щоб відображати якусь інфу -->
+                <span>Pickup</span>
+              </label>
+              <label class="modal-delivery__label">
+                <input
+                  class="modal-delivery__radio"
+                  type="radio"
+                  name="format"
+                  value="Delivery"
+                />
+                <span>Delivery</span>
+              </label>
+            </fieldset>
+
+            <fieldset class="modal-delivery__fieldset">
+              <!-- modal-delivery__fieldset--hide цей клас щоб ховати інформацію ждя длставки -->
+              <input
+                class="modal-delivery__input"
+                type="text"
+                name="address"
+                placeholder="Street, house, flat"
+              />
+              <input
+                class="modal-delivery__input modal-delivery__input--half"
+                type="number"
+                name="floor"
+                placeholder="Floor"
+              />
+              <input
+                class="modal-delivery__input modal-delivery__input--half"
+                type="number"
+                name="intercom"
+                placeholder="Intercom"
+              />
+            </fieldset>
+          </form>
+
+          <button class="modal-delivery__submit" type="submit" form="delivery">
+            To order
+          </button>
+        </div>
+
+        <button class="modal__close" type="button">
+          <svg
+            width="24"
+            height="24"
+            class="close"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              x="5.0752"
+              y="5.28249"
+              width="1"
+              height="20"
+              transform="rotate(-45 5.0752 5.28249)"
+            />
+            <rect
+              x="5.78223"
+              y="19.4246"
+              width="1"
+              height="20"
+              transform="rotate(-135 5.78223 19.4246)"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script>
+      document
+        .querySelector('.order__wrap-title')
+        .addEventListener('click', () => {
+          document.querySelector('.order').classList.toggle('order--open');
+        });
+    </script>
+
+    <script src="./js/calcCartPrice.js"></script>
+    <script src="./js/toggleCartStatus.js"></script>
+    <script src="./js/counter.js"></script>
+    <script src="./js/cart.js"></script>
+    <script src="./js/order.js"></script>
+  </body>
+</html>
