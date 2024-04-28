@@ -29,19 +29,6 @@
     margin-bottom: 0;
   }
 
-  &__count {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 400;
-    font-size: 10px;
-    line-height: 14px;
-    width: 32px;
-    height: 16px;
-    background: var(--light-gray);
-    border-radius: 6px;
-  }
-
   &__wrap--list {
     display: none;
   }
@@ -183,12 +170,6 @@
 
     &__title {
       font-size: 24px;
-    }
-
-    &__count {
-      width: 41px;
-      height: 20px;
-      font-size: 12px;
     }
 
     &__item {
